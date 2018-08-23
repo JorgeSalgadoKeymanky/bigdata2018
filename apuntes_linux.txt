@@ -1,0 +1,128 @@
+CLASE 20 AGOSTO 2018
+
+
+	PERIODO SIN CLASES
+		7 AL 16 SEPTIEMBRE (1 viernes 1 semana)
+		9 AL 16 OCTUBRE (1 semana martes a martes)
+		9 al 15 NOV (1 semana viernes a viernes)
+		FIN 10 Diciembre
+		1 año para tesina y diploma
+
+
+
+VAGRANT
+
+	vagrant init nogala/centos --box-version 1	/*Inicializa la imagen nogala con la distribucion centos, nogala debe estar en vagrand cloud*/
+
+	vagrant plugin install vagrant-vbguest
+
+	vagrant up  /* Se arranca desde aqui las siguientes veces */
+
+	vagrant ssh
+
+	vagrant global-status	/*Ver las maquinas virtuales que tenemios */
+
+	Vagrantfile
+		Contiene la configuracion de la imagen, direccion ip, enrutamiento, router, etc
+		 	# config.vm.network "forwarded_port", guest: 80, host: 8080 /*  Enrutamiento  */
+
+	En el directorio de trabajo "C:\Users\Aula E1\Practicas" puedes copiar y pegar los archivos y estos estaran disponibles en /vagrant dentro de la maquina virtual
+
+	cat/proc	/*Ver los procesadores*/
+	free -m 	/*Ver la memoria disponible libre -g en gigas*/
+	halt		/*Salir de la maquina*/
+
+
+LINUX (CENTOS)
+
+	etc									Almacena las variables de entorno
+	systemclt restart sshd.service		Reiniciar el servicio	
+	hostnamectl							Muestra la info basica de la maquina virtual
+	yum									Podemos crear nuestros propios paquetes a diferencia apt-get
+	hostnamectl set-hostname Jorge
+	yum update -y 						Actualizar, -y yes all
+	whereis java
+	la variable de entorno				/etc/environmet
+	echo $JAVA_HOME						Imprimir el valor de la variable
+	env 								Despliega todas las variable de environmet
+	/etc/ssh/sshd_config				Se recomienda en vez de usuario y contraseña generar un archivo digital de esta manera #PassworAuthentication yes, reiniciar el servicio (systemctl restar sshd.service)
+	passwd								Cambiar el password del usuario por default si esta vacio cambia el de root
+	/usr/local/src 						Carpeta donde se instalan los paquetes
+	yum groupinstall "Devolopment Tools" -y
+	wathc								Ver la memoria disponible
+	systemctl status httpd 				Muestra info del proceso del sistema
+
+
+	sudo su xxx									Se loguea como el usuario xxx
+	useradd your_new_username
+	passwd your_new_username
+	sudo usermod -G wheel your_new_username		Mover de grupo al usuario con el grupo con el usuario con el que se esta ejecutando
+
+	el archivo 	/etc/motd 				Archivo que lee al arrancar el sistema
+
+	CREAR EL ARCHIVO install.sh
+		update
+
+
+
+		instalar python con pip
+		instalar tmux (dividir la pantalla ctrl+v+"" o ctrl+v+% divide, ctrl+b+flecha te mueve)
+		instalar htop (monitorear el cpu, ram)
+
+
+	MAVEN
+		wget 
+		maven.sh  									/* /etc/profile.d */
+			# Apache Maven Enviroment Variables
+			# MAVEN_HOME for maven 1 -M2_Home for Maven 2
+			export M2_HOME = /usr/local/src/apache-maven	//Variable de environmet	
+			export PATH=${M2_HOME}/bin:${PATH}				//Agrege la variable un bin donde ejecutar los archivos
+			Darle permisos de ejecucion +x
+
+			mvn --version
+
+	PYTHON
+			/usr/local/src
+			sudo .configure
+			make
+			make install
+
+	GIT
+			configure user , and email en el home del usuario
+			git remote add origin "httpds://github.com/"
+
+			git init
+			git add README.sh
+			git commit -m "First commit"
+			git remote add origin "url"
+			git push -u origin master
+
+			Brazos, versiones del programa
+				Una rama por dia, tema, 
+
+				git branch -a 				Mostrar las ramas
+				git checkout -b nueva_rama	Crea la rama
+
+			LLaves Publica
+				Si no quiero que me pida la contraseña en git hub crear una llava privada
+				1) Generar la llave digital en la maquina
+				2) Subir la llave al git hub
+				3) Ya no pedira contraseña
+
+				ssh-keygen -t rsa -P ""
+				cd .ssh/
+				cat authorized_keys
+
+	WEB
+			yum install httpd -y
+			systemctl start http
+			con curl probar si esta arriba
+			configurar el puerto http
+
+PRACTICA
+
+	Personalizar la maquina virtual
+	Establecer fecha, hora, zona horaria
+	Actualizar el sistema
+	Instalar Java (yum install -y wget para poder instalar paquetes)
+		wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.rpm"
