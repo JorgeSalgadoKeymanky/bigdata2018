@@ -1,0 +1,106 @@
+    1  exit
+    2  exit
+    3  sudo su
+    4  sudo usermod -G jorge 
+    5  sudo su jorge
+    6  git
+    7  git confi
+    8  git config --global user.name "JorgeSalgadoKeymanky";
+    9  git 
+   10  exit
+   11  it config --global user.name "orgeSalgadoKeymanky";
+   12  git config
+   13  sudo su
+   14  sudo su jorge
+   15  git config
+   16  git config --global user.name "JorgeSalgadoKeymanky"
+   17  git config --global user.name "JorgeSalgadoKeymanky"
+   18  cd 
+   19  git config --global user.name "JorgeSalgadoKeymanky"
+   20  git config --global user.email "salgado.jm.91@gmail.com"
+   21  ls -la
+   22  mkdir pruebas
+   23  echo "# pruebas" >> REAME.md
+   24  pwd
+   25  git init
+   26  git add README.md
+   27  git add REAME.md
+   28  git commit -m "firs commit"
+   29  git remote add origin https://github.com/JorgeSalgadoKeymanky/pruebas.git
+   30  git push -u origin master
+   31  git push -u origin master
+   32  ls -la
+   33  cd pruebas/
+   34  ls -la
+   35  cd prueba
+   36  pwd
+   37  ls 
+   38  ls -la
+   39  cd ..
+   40  rm -rf REAME.md 
+   41  ls -la
+   42  rm -rf .git
+   43  cd pruebas/
+   44  s
+   45  pwd
+   46  ls 
+   47  git init
+   48  git add REAME2.sh
+   49  nano REAME2.sh
+   50  git commit -m "First commit"
+   51  git add *
+   52  git commit -m
+   53  git commit -m "First Commit"
+   54  git remote add origin "url";
+   55  exit
+   56  ls
+   57  cd
+   58  ls -la
+   59  cd pruebas/
+   60  ls -la
+   61  cd ..
+   62  rm -rf pruebas/
+   63  ls -la
+   64  mkdir bigdata2018
+   65  ls -la
+   66  cd bigdata2018/
+   67  echo "# NOTAS DE LA CLASE" >> README.md
+   68  git init
+   69  git add *
+   70  git commit -m "Primer commit"
+   71  git remote add origin https://github.com/JorgeSalgadoKeymanky/bigdata2018.git
+   72  git push -u origin master
+   73  PWD
+   74  pwd
+   75  git branch -a
+   76  git checkout -b rama1
+   77  git chechout -b rama1
+   78  nano rama1.txt
+   79  git add *
+   80  git commit -m "Push primer rama" rama1
+   81  git branch -a
+   82  git status
+   83  git add *
+   84  git commit -m "Primer Rama" rama1
+   85  git commit -m "Primer Rama" rama1.txt
+   86  git push -u rama1
+   87  git branch -a
+   88  pwd
+   89  git status
+   90  ls 
+   91  clear
+   92  git branch -a
+   93  ls -la
+   94  exit
+   95  ls
+   96  cd
+   97  ls
+   98  cd bigdata2018/
+   99  ls -la
+  100  clear
+  101  git branch -a
+  102  ls
+  103  git commit -m "Rama 1" rama1.txt
+  104  git add rama1.txt
+  105  git commit -m "Rama 1" rama1.txt
+  106  history >> test.txt
